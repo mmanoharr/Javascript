@@ -162,3 +162,82 @@
 //     console.log(numbers[i]);
 //     }
 // }
+// 56. Print all the digits of a given number
+// let number = parseInt(prompt('Enter the number'));
+// console.log('Digits of the given Number:')
+// while (number > 0) {
+//      let digit = number % 10;
+//      console.log(digit);
+//      number = Math.floor(number / 10);
+// }
+// solution 2 without using Math.floor
+// let number = parseInt(prompt('Enter the number'));
+// console.log('Digits of the given Number');
+// while (number > 0) {
+//     let digit = number % 10;
+//     console.log(digit);
+//     number = (number - digit) / 10;
+// }
+//57. Write a program to print only even digits of a given number The output should be 4,2,6 Ex. Let us take 154256
+// let number = 154256;
+// console.log('Even digits in reverse order:');
+// let reversedNumber = 0;
+// while (number >0) {
+//     let digit = number % 10;
+//     if (digit % 2 === 0) {
+//         reversedNumber = reversedNumber * 10 + digit;
+//     }
+//     number = (number - digit) / 10;
+// }
+// while (reversedNumber > 0) {
+//     let digit = reversedNumber % 10;
+//     console.log(digit);
+//     reversedNumber = (reversedNumber - digit) / 10;
+// }
+// 58. Write a program to print only odd digits of a given number Ex. Let us take 1542763 The output should be 1,5,7,3
+// let number = 1542763;
+// console.log('Odd numbers in reverse order:');
+// let reversedNumber = 0;
+// while (number > 0) {
+//     let digit = number % 10;
+//     if (digit % 2 !== 0) {
+//         reversedNumber = reversedNumber * 10 + digit;
+//     }
+//     number = (number - digit) / 10;
+// }
+// while (reversedNumber > 0) {
+//     let digit = reversedNumber % 10;
+//     console.log(digit);
+//     reversedNumber = (reversedNumber - digit) / 10;
+// }
+//59. Write a program to print the number at 10’s place
+//solution 1
+// let number = parseInt(prompt('Enter the number'));
+// let count = 0;
+// let tensDigit;
+// while (number > 0) {
+//     tensDigit = number % 10;
+//     count++;
+//     if (count === 2) {
+//         break;
+//     }
+//     number = (number - tensDigit) / 10;
+// }
+// console.log(`Number at 10's place is ${tensDigit}`);
+//Solution 2
+// let number = parseInt(prompt('Enter the number'));
+// let tensDigit = Math.floor((number / 10) % 10);
+// console.log(`Number at tens place is ${tensDigit}`);
+//60. Write a program to print the number at 100’s place
+// let number = parseInt(prompt('Enter the number'));
+// let count = 0;
+// let hunderdsPlace;
+// while (number > 0) {
+//  hunderdsPlace = number % 10;
+// count++;
+// if (count === 3) {
+//     break;
+// }
+// number = (number - hunderdsPlace) / 10;
+// }
+// console.log(`Number at hunderds place is ${hunderdsPlace}`);
